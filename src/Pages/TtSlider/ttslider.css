@@ -1,0 +1,9 @@
+.quote{
+    transform: rotate(360);
+}
+.hb:hover{
+    border-bottom: 5px solid orange;
+}
+*body{
+    box-sizing: border-box;
+}

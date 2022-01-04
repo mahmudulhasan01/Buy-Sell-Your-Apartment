@@ -2,7 +2,10 @@ import "./App.css";
 import { Route, BrowserRouter } from "react-router-dom";
 import { Switch } from "react-router-dom";
 import Home from "./Pages/Home/Home";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import TtSlider from "./Pages/TtSlider/TtSlider";
+import { Container } from "@mui/material";
 function App() {
   return (
     <div>
@@ -13,6 +16,13 @@ function App() {
           </Route>
           <Route path="/home">
             <Home />
+          </Route>
+          <Route path='/ttslider'>
+            <Container >
+
+              <TtSlider />
+            </Container>
+
           </Route>
           <Route path="*">{/* <NotFound /> */}</Route>
         </Switch>
