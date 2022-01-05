@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import { FormatQuote } from '@material-ui/icons';
 import './ttslider.css';
 import quote from '../../../src/Img/iconmonstr-quote-left-thin.svg'
-import { Container, Grid } from '@mui/material';
+import { Chip, Container, Grid } from '@mui/material';
 const TtSlider = () => {
 
     var settings = {
@@ -50,11 +50,18 @@ const TtSlider = () => {
     };
 
     return (
-        <div sx={{ color: '#f8f7fc' }}>
-            <h2> Responsive </h2>
+        <div >
+            <div style={{ display: 'grid', placeContent: 'center', marginTop: '10px' }}>
+                <Chip variant='outlined' color='warning' label="Our Testimonial" />
+                <h2>Customers Feedback</h2>
+
+            </div>
+
             <Slider {...settings}>
                 <div>
+                    <div sx={{ mx: 'auto' }}>
 
+                    </div>
                     <Card className="hb" sx={{ minWidth: 275, mx: 3, }}>
                         <CardContent >
                             <Typography gutterBottom >

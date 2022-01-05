@@ -1,0 +1,4 @@
+.tc:hover{
+    color: #ff5a3c;
+    transition: .5s;
+}

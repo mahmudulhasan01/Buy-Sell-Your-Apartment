@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TtSlider from "./Pages/TtSlider/TtSlider";
 import { Container } from "@mui/material";
+import NewsBlog from "./Pages/NewsBlog/NewsBlog";
 function App() {
   return (
     <div>
@@ -21,6 +22,13 @@ function App() {
             <Container >
 
               <TtSlider />
+            </Container>
+
+          </Route>
+          <Route path='/news'>
+            <Container >
+
+              <NewsBlog />
             </Container>
 
           </Route>
