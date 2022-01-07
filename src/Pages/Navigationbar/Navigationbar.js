@@ -12,6 +12,8 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import logo from "../../Img/logoforq.png";
+import useAuth from '../Hooks/useAuth';
+import { Link } from 'react-router-dom';
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -33,6 +35,7 @@ const Navigationbar = () => {
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
     };
+    const { user, logOut } = useAuth({});
 
     return (
         <AppBar position="static">
@@ -108,7 +111,6 @@ const Navigationbar = () => {
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                                 {/* <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" /> */}
 
-                                <i class="fas fa-user"></i>
                             </IconButton>
                         </Tooltip>
                         <Menu
@@ -133,6 +135,9 @@ const Navigationbar = () => {
                                 </MenuItem>
                             ))}
                         </Menu>
+                        {user.email && <span style={{ marginRight: '10px' }}>{user.displayName}</span>}
+                        <i style={{ color: 'black', fontSize: '25px' }} class="fas fa-user"></i> <span style={{ marginLeft: 10 }}>{user.email ? <span style={{ fontWeight: 'bold' }} onClick={logOut}>Logout</span> : <Link style={{ textDecoration: 'none', marginLeft: 10 }} to='/login'>Login
+                        </Link>}</span>
                     </Box>
                 </Toolbar>
             </Container>
