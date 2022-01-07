@@ -26,6 +26,7 @@ const OurServices = () => {
                   <CardMedia
                     component="img"
                     height="140"
+
                     image="https://i.ibb.co/d4BZX2h/fouces1.png"
                     alt="green iguana"
                   />

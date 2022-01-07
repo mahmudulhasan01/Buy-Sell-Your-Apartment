@@ -7,13 +7,24 @@ import "slick-carousel/slick/slick-theme.css";
 import TtSlider from "./Pages/TtSlider/TtSlider";
 import { Container } from "@mui/material";
 import NewsBlog from "./Pages/NewsBlog/NewsBlog";
+import Navigationbar from "./Pages/Navigationbar/Navigationbar";
+import TopBanner from "./Pages/TopBanner/TopBanner";
+import Product from "./Pages/Product/Product";
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
+            <Navigationbar />
+            <TopBanner />
             <Home />
+            <Container>
+
+              <TtSlider />
+            </Container>
+
+
           </Route>
           <Route path="/home">
             <Home />
@@ -29,6 +40,13 @@ function App() {
             <Container >
 
               <NewsBlog />
+            </Container>
+
+          </Route>
+          <Route path='/product'>
+            <Container >
+
+              <Product />
             </Container>
 
           </Route>
