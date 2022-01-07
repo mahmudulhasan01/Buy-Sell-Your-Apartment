@@ -68,7 +68,29 @@ const NewsBlog = () => {
                 <Slider {...settings}>
                     <div>
 
-                       
+                        <Card className="" sx={{ minWidth: 275, mx: 3, }}>
+                            <CardContent >
+
+                                <CardMedia
+                                    component="img"
+
+                                    image="https://mui.com/static/images/cards/contemplative-reptile.jpg"
+                                    alt="green iguana"
+                                />
+
+
+                                <Typography gutterBottom >
+                                    <h6 style={{ display: 'inline', marginRight: '50px', textAlign: 'center' }}> <i style={{ color: '#ff5a3c' }} class="fas fa-user"></i> <span className='tc'>by: Admin</span></h6> <h6 style={{ display: 'inline', marginRight: '50px' }}> <i style={{ color: '#ff5a3c' }} class="fas fa-tags"></i>  <span className='tc'>Decorate</span></h6>
+                                    <h4 className='tc'>10 Briliant way to decorate Your Home</h4>
+                                    <hr />
+                                    <div><h5 style={{ display: 'inline', marginRight: '60px' }}>  <i style={{ color: '#ff5a3c' }} class="far fa-calendar-alt"></i> June 24,2021</h5> <h5 style={{ display: 'inline', color: '#ff5a3c' }}>Read More</h5></div>
+
+
+                                </Typography>
+
+                            </CardContent>
+
+                        </Card>
 
 
 

@@ -10,49 +10,80 @@ import NewsBlog from "./Pages/NewsBlog/NewsBlog";
 import Navigationbar from "./Pages/Navigationbar/Navigationbar";
 import TopBanner from "./Pages/TopBanner/TopBanner";
 import Product from "./Pages/Product/Product";
+import Footer from "./Pages/Footer/Footer";
+import AuthProvider from "./Pages/Context/AuthProvider/AuthProvider";
+import Login from "./Pages/Login/Login";
+import Register from "./Pages/Register/Register";
+
+
 function App() {
   return (
     <div>
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/">
-            <Navigationbar />
-            <TopBanner />
-            <Home />
-            <Container>
+      <AuthProvider>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/">
+              <Navigationbar />
+              <TopBanner />
+              <Home />
+              <Container>
 
-              <TtSlider />
-            </Container>
+                <Product />
+              </Container>
+              <Container>
 
-
-          </Route>
-          <Route path="/home">
-            <Home />
-          </Route>
-          <Route path='/ttslider'>
-            <Container >
-
-              <TtSlider />
-            </Container>
-
-          </Route>
-          <Route path='/news'>
-            <Container >
+                <TtSlider />
+              </Container>
 
               <NewsBlog />
-            </Container>
+              <Footer />
 
-          </Route>
-          <Route path='/product'>
-            <Container >
+            </Route>
+            <Route path="/home">
+              <Home />
+            </Route>
+            <Route path="/login">
+              <Navigationbar />
+              <Container style={{ paddingBottom: '100px', }}>
 
-              <Product />
-            </Container>
+                <Login />
+              </Container>
+              <Footer />
+            </Route>
+            <Route path="/register">
+              <Navigationbar />
+              <Container style={{ paddingBottom: '200px', }}>
 
-          </Route>
-          <Route path="*">{/* <NotFound /> */}</Route>
-        </Switch>
-      </BrowserRouter>
+                <Register />
+              </Container >
+              <Footer />
+            </Route>
+            <Route path='/ttslider'>
+              <Container >
+
+                <TtSlider />
+              </Container>
+
+            </Route>
+            <Route path='/news'>
+              <Container >
+
+                <NewsBlog />
+              </Container>
+
+            </Route>
+            <Route path='/product'>
+              <Container >
+
+                <Product />
+              </Container>
+
+            </Route>
+
+            <Route path="*">{/* <NotFound /> */}</Route>
+          </Switch>
+        </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }
